@@ -1,0 +1,58 @@
+.coach-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.coach {
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px 10px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100px;
+}
+
+.coach-header {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.windows {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 5px;
+}
+
+.window {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border: 1px solid #333;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+.coach-content {
+  font-size: 13px;
+  text-align: center;
+}
+
+.coach-wheels {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.wheel {
+  width: 14px;
+  height: 14px;
+  background-color: black;
+  border-radius: 50%;
+}
