@@ -1,5 +1,5 @@
-import React from 'react';
-import './TrainCoach.css';
+import React from "react";
+import "./TrainCoach.css";
 
 const TrainCoach = ({
   version,
@@ -9,22 +9,20 @@ const TrainCoach = ({
   title,
   content,
   featuresCount,
-  isSelected,
 }) => {
-  const windows = Array.from({ length: featuresCount || 0 });
+  const windows = Array.from({ length: featuresCount > 0 ? featuresCount : 1 });
 
   return (
-    <div className="coach-container">
+    <div className="coach-container" onClick={onClick}>
       <div
-        className={`coach ${isSelected ? 'selected' : ''}`}
-        onClick={onClick}
-        style={{ width: width || 120, backgroundColor: bgColor || '#eee' }}
+        className="coach"
+        style={{ width: width || 120, backgroundColor: bgColor || "white" }}
         title={title}
       >
         <div className="coach-header">{version}</div>
         <div className="windows">
           {windows.map((_, i) => (
-            <div className="window" key={i} />
+            <div className="window-box" key={i} />
           ))}
         </div>
         <div className="coach-content">{content}</div>
